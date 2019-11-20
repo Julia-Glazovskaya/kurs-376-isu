@@ -2,8 +2,10 @@
 
 namespace app\controllers;
 
+use app\models\AudForm;
 use Yii;
 use yii\filters\AccessControl;
+use yii\helpers\ArrayHelper;
 use yii\web\Controller;
 use yii\web\Response;
 use yii\filters\VerbFilter;
@@ -124,5 +126,18 @@ class SiteController extends Controller
     public function actionAbout()
     {
         return $this->render('about');
+    }
+
+    public function actionAud(){
+        $model = new AudForm();
+        $array = $model->find()->all();
+        $drop = ArrayHelper::map($array,'id','num');
+        $place =  ArrayHelper::map($array,'id','');
+        return $this->render('aud', [
+            'model' => $model,
+            'drop' => $drop,
+            'place' => $place   ,
+        ]);
+
     }
 }

@@ -1,8 +1,11 @@
 html,
 body {
     height: 100%;
+	
 }
-
+body{
+	background-image: url(../images/bg.jpg)!important;
+}
 .wrap {
     min-height: 100%;
     height: auto;
@@ -34,6 +37,14 @@ body {
 .not-set {
     color: #c55;
     font-style: italic;
+}
+.content-wrapper{
+    background-image: url(../images/bg.jpg)!important;
+    background-repeat:no-repeat;
+    -webkit-background-size: 100%;
+    background-position: 0 350px;
+
+    background-size: 100%;
 }
 
 /* add sorting icons to gridview sort links */

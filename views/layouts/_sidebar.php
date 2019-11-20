@@ -80,10 +80,15 @@ $developerMenuItems[] = [
     'icon' => 'cog',
     'label' => 'Param A',
 ];
-$developerMenuItems[] = [
-    'url' => ['/sub/action/param', 'id' => 'b'],
+$menuItems[] = [
+    'url' => ['/newmodule/post'],
     'icon' => 'cog',
-    'label' => 'Param B',
+    'label' => 'newmodule',
+];
+$menuItems[] = [
+    'url' => ['/module/post'],
+    'icon' => 'cog',
+    'label' => 'module',
 ];
 
 
@@ -100,13 +105,7 @@ $menuItems[] = [
     'items' => $developerMenuItems,
 ];
 
-for ($i = 0; $i < 25; $i++) {
-    $menuItems[] = [
-        'url' => ['/test/auto', 'id' => $i],
-        'icon' => 'cog',
-        'label' => 'Auto '.$i,
-    ];
-}
+ 
 
 echo dmstr\widgets\Menu::widget([
     'items' => \yii\helpers\ArrayHelper::merge($favouriteMenuItems, $menuItems),

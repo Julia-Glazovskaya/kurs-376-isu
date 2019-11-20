@@ -53,6 +53,14 @@ $config = [
         ],
         */
     ],
+    'modules' => [
+        'newmodule' => [
+            'class' => 'app\modules\Vova\newmodule',
+        ],
+        'module' => [
+            'class' => 'app\modules\Jula\module',
+        ],
+    ],
     'params' => $params,
 ];
 
